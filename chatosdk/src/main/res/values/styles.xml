@@ -1,0 +1,337 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+
+    <style name="Widget.SocialView" parent="android:Widget.TextView">
+        <item name="hashtagColor">?colorAccent</item>
+        <item name="mentionColor">?colorAccent</item>
+        <item name="hyperlinkColor">?colorAccent</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ButtonNegativeStyle" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/colorMonocrome90</item>
+        <item name="android:background">@drawable/button_selector_outline_chat</item>
+    </style>
+
+    <style name="ButtonPositiveStyle" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/colorMonocrome10</item>
+        <item name="android:background">@drawable/button_selector_chat</item>
+    </style>
+
+
+    <style name="FabAppearanceChato" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">100%</item>
+    </style>
+
+    <style name="TabLayoutTextStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="ToolBarTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorButtonNormal">@color/colorAccent</item>
+        <item name="android:actionBarStyle">@style/ToolBarThemeBackgroundActionBar</item>
+        <item name="actionBarStyle">@style/ToolBarThemeBackgroundActionBar</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="ToolbarSubtitleAppearance" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="ToolBarThemeBackgroundActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="background">@color/colorPrimary</item>
+    </style>
+
+    <!--<style name="TextAppearance.FontPath" parent="android:TextAppearance">
+        &lt;!&ndash; Custom Attr&ndash;&gt;
+        <item name="fontPath">fonts/SanFransisco-Regular.otf</item>
+    </style>-->
+    <style name="ButtonStyle" parent="TextAppearance.AppCompat.Button">
+        <!-- Custom Attr-->
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:paddingLeft">24dp</item>
+        <item name="android:paddingRight">24dp</item>
+        <item name="android:background">@drawable/button_accent</item>
+    </style>
+
+    <style name="ButtonRedNegativeStyle" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/colorMonocrome90</item>
+        <item name="android:background">@drawable/button_chat_selector_outline</item>
+    </style>
+
+    <style name="Text.Standard" parent="TextView.Regular">
+        <item name="android:textSize">@dimen/text_regular</item>
+        <item name="android:fontFamily">@font/thefont</item>
+    </style>
+
+    <style name="TextInputLayout.Standard" parent="Widget.AppCompat.EditText">
+        <item name="android:textSize">@dimen/text_regular</item>
+        <item name="android:background">@drawable/et_fild</item>
+        <item name="android:drawablePadding">20dp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textColorHint">#B3B4B4B4</item>
+        <item name="android:drawableTint" tools:targetApi="m">@color/colorPrimary</item>
+    </style>
+
+    <style name="TextInputLayout.Outline" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="Text.Standard.OneRow" parent="Text.Standard">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="Text.Standard.Bold" parent="TextView.Bold">
+        <item name="android:textSize">@dimen/text_regular</item>
+    </style>
+
+    <style name="Text.Standard.Bold.OneRow" parent="Text.Standard.Bold">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="Text.Standard.Italic" parent="TextView.Italic">
+        <item name="android:textSize">@dimen/text_regular</item>
+    </style>
+
+    <style name="Text.Medium" parent="TextView.Regular">
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+    <style name="Text.Title" parent="TextView.Bold">
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:color">@color/grey_900</item>
+    </style>
+
+    <style name="Text.Title.Thin" parent="TextView.Regular">
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:color">@color/grey_900</item>
+    </style>
+
+    <style name="Text.Title.OneRow" parent="Text.Title">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="Text.Title.Thin.OneRow" parent="Text.Title.Thin">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="Text.Title.Banner" parent="TextView.Bold">
+        <item name="android:textSize">@dimen/text_large</item>
+        <item name="android:color">@color/black</item>
+    </style>
+
+
+    <style name="Text.Caption" parent="TextView.Regular">
+        <item name="android:textSize">@dimen/text_small</item>
+        <item name="android:color">@color/grey_500</item>
+    </style>
+
+    <style name="Text.Caption.OneRow" parent="Text.Caption">
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="Text.Caption.Italic" parent="TextView.Italic">
+        <item name="android:textSize">@dimen/text_small</item>
+        <item name="android:color">@color/grey_500</item>
+    </style>
+
+
+
+    <style name="clickable" parent="android:Widget.TextView">
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="TextView.Regular" parent="android:Widget.TextView">
+<!--        <item name="fontPath">fonts/SanFransisco-Regular.otf</item>-->
+        <item name="android:color">@color/grey_900</item>
+        <item name="android:fontFamily">@font/thefont</item>
+    </style>
+
+    <style name="TextView.Italic" parent="android:Widget.TextView">
+<!--        <item name="fontPath">fonts/SanFrancisco-RegularItalic.otf</item>-->
+        <item name="android:color">@color/grey_900</item>
+        <item name="android:fontFamily">@font/thefont</item>
+    </style>
+
+    <style name="TextView.Bold" parent="android:Widget.TextView">
+<!--        <item name="fontPath">fonts/SF-Semibold.otf</item>-->
+        <item name="android:color">@color/grey_900</item>
+        <item name="android:fontFamily">@font/thefont</item>
+    </style>
+
+    <!--Grid Styling Text-->
+    <style name="Text.SingleTitle.Regular" parent="TextView.Regular">
+        <item name="android:textSize">@dimen/text_huge</item>
+        <item name="android:color">@color/grey_900</item>
+    </style>
+
+    <style name="Text.SingleTitle.Bold" parent="TextView.Bold">
+        <item name="android:textSize">@dimen/text_huge</item>
+        <item name="android:color">@color/grey_900</item>
+    </style>
+
+    <style name="Text.SubSingleTitle.Regular" parent="TextView.Regular">
+        <item name="android:textSize">@dimen/text_large</item>
+        <item name="android:color">@color/grey_900</item>
+    </style>
+
+    <style name="Text.SubSingleTitle.Bold" parent="TextView.Bold">
+        <item name="android:textSize">@dimen/text_large</item>
+        <item name="android:color">@color/grey_900</item>
+    </style>
+
+    <style name="Text.HeaderTitle.Regular" parent="TextView.Regular">
+        <item name="android:textSize">@dimen/text_large</item>
+        <item name="android:color">@color/grey_900</item>
+    </style>
+
+    <style name="Text.HeaderTitle.Bold" parent="TextView.Bold">
+        <item name="android:textSize">@dimen/text_large</item>
+        <item name="android:color">@color/grey_900</item>
+    </style>
+
+    <style name="Text.SubHeaderTitle.Regular" parent="TextView.Regular">
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:color">@color/grey_900</item>
+    </style>
+
+    <style name="Text.SubHeaderTitle.Bold" parent="TextView.Bold">
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:color">@color/grey_900</item>
+    </style>
+
+    <style name="Text.SingleField.Regular" parent="TextView.Regular">
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:color">@color/grey_900</item>
+    </style>
+
+    <style name="Text.SingleField.Bold" parent="TextView.Bold">
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:color">@color/grey_900</item>
+    </style>
+
+    <style name="Text.TitleField.Regular" parent="TextView.Regular">
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:color">@color/grey_900</item>
+    </style>
+
+    <style name="Text.TitleField.Bold" parent="TextView.Bold">
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:color">@color/grey_900</item>
+    </style>
+
+    <style name="Text.SubTitleField.Regular" parent="TextView.Regular">
+        <item name="android:textSize">@dimen/text_regular</item>
+        <item name="android:color">@color/grey_900</item>
+    </style>
+
+    <style name="Text.SubTitleField.Bold" parent="TextView.Bold">
+        <item name="android:textSize">@dimen/text_small_3</item>
+        <item name="android:color">@color/grey_900</item>
+    </style>
+
+    <style name="Text.Caption.Regular" parent="TextView.Regular">
+        <item name="android:textSize">@dimen/text_small_3</item>
+        <item name="android:color">@color/grey_900</item>
+    </style>
+
+    <style name="Text.Caption.Bold" parent="TextView.Bold">
+        <item name="android:textSize">@dimen/text_small_3</item>
+        <item name="android:color">@color/grey_900</item>
+    </style>
+
+    <style name="Text.Information.Regular" parent="TextView.Regular">
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:color">@color/grey_900</item>
+    </style>
+
+    <style name="Text.Information.Bold" parent="TextView.Bold">
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:color">@color/grey_900</item>
+    </style>
+    <!--End Of Grid Styling Text-->
+
+    <!--Grid Styling Button-->
+
+    <style name="Theme.Intro" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!--Emoji Bottom Sheet-->
+
+    <style name="BottomSheet" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="background">@drawable/bg_bottom_sheet</item>
+    </style>
+    <!--Emoji Bottom Sheet-->
+
+    <style name="EmojiBottomSheet" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- Dialog style -->
+        <item name="bottomSheetDialogTheme">@style/EmojiBottomSheetDialogTheme</item>
+    </style>
+
+    <style name="EmojiBottomSheetDialogTheme">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="EmojiBottomSheet.TextAppearance.Bold" parent="EmojiBottomSheet">
+        <item name="android:textColor">@color/greyDark</item>
+        <item name="android:textColorHint">@color/greyLight</item>
+        <item name="android:textSize">@dimen/text_h4_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="EmojiBottomSheet.TextAppearance.Body1" parent="EmojiBottomSheet">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/colorGreyMid</item>
+        <item name="android:textColorHint">@color/greyLight</item>
+        <item name="android:textSize">@dimen/text_plain</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <style name="EmojiBottomSheet.TextAppearance.H3" parent="EmojiBottomSheet.TextAppearance.Bold">
+        <item name="android:textSize">@dimen/text_h3_size</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="EmojiBottomSheet.TextAppearance.H6" parent="EmojiBottomSheet.TextAppearance.Bold">
+        <item name="android:textSize">@dimen/text_h6_size</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="txt_network_error">Jaringan sedang bermasalah</string>
+    <string name="txt_data_error">Data tidak dapat ditampilkan</string>
+    <string name="txt_server_error">Server tidak terhubung</string>
+    <string name="txt_server_time_out">Jaringan terlalu lama merespon</string>
+    <string name="txt_check_connection">Periksa koneksi internet Anda</string>
+    <string name="txt_NoConnection">Tidak Ada Jaringan Internet</string>
+    <string name="form_empty">Kolom tidak boleh kosong</string>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.commit451.elasticdragdismisslayout.ElasticDragDismissLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/draggable_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:dragDismissDistance="112dp"
+    android:background="@color/grey_800"
+    tools:context="com.gamatechno.chato.sdk.app.playvideo.PlayVideoActivity"
+    app:dragDismissScale="0.95">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <VideoView
+            android:id="@+id/videoview"
+            android:transitionName="video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" />
+        <include
+            layout="@layout/toolbar_main_flat_transparent"/>
+    </RelativeLayout>
+</com.commit451.elasticdragdismisslayout.ElasticDragDismissLinearLayout>
+
+

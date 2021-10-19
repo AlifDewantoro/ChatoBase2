@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ The MIT License (MIT)
+  ~
+  ~ Copyright (c) 2017. Shendy Aditya Syamsudin
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in
+  ~ all copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  ~ THE SOFTWARE.
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_more"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_more"
+        app:iconTint="@color/colorMonocrome100"
+        android:title="Info Kontak"
+        app:showAsAction="always" >
+        <menu>
+
+            <item
+                android:id="@+id/action_room_info"
+                android:orderInCategory="100"
+                android:title="Info Kontak"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/action_phonecall"
+                android:icon="@drawable/ic_local_phone_black_24dp"
+                android:orderInCategory="100"
+                android:title="Panggilan Suara"
+                android:visible="false"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/action_videocall"
+                android:icon="@drawable/ic_videocam_black_24dp"
+                android:orderInCategory="100"
+                android:title="Panggilan Video"
+                android:visible="false"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/action_starredmessage"
+                android:orderInCategory="100"
+                android:title="Pesan Berbintang"
+                app:showAsAction="never" />
+
+            <!--
+            <item
+                android:id="@+id/action_schedule"
+                android:orderInCategory="100"
+                android:title="Agenda"
+                app:showAsAction="never" />
+
+        -->
+            <item
+                android:id="@+id/action_searchmessage"
+                android:orderInCategory="100"
+                android:title="Cari Pesan"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+
+</menu>

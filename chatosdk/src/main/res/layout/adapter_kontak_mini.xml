@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="65dp"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dimen_4dp"
+    android:clickable="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/avatarCard"
+        android:layout_width="@dimen/avatar_dimen"
+        android:layout_height="@dimen/avatar_dimen"
+        app:cardCornerRadius="27.5dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+        <com.gamatechno.ggfw_ui.avatarview.views.AvatarView
+            android:id="@+id/avatar"
+            android:layout_width="@dimen/avatar_dimen"
+            android:layout_height="@dimen/avatar_dimen"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@color/grey_100"
+        app:cardCornerRadius="11dp"
+        app:layout_constraintBottom_toBottomOf="@+id/avatarCard"
+        app:layout_constraintEnd_toEndOf="@+id/avatarCard"
+        android:layout_width="@dimen/dimen_22dp"
+        android:layout_height="@dimen/dimen_22dp"
+        android:id="@+id/btn_cancel">
+        <ImageView
+            app:tint="@color/red_400"
+            android:layout_gravity="center"
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/dimen_20dp"
+            android:layout_height="@dimen/dimen_20dp"
+            android:src="@drawable/ic_close_bullet" />
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:textAlignment="center"
+        style="@style/Text.Caption.OneRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:layout_marginTop="8dp"
+        android:text="Al Muwahhid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avatarCard" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

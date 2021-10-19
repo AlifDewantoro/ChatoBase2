@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_menu"
+        android:title="Menu"
+        android:icon="@drawable/ic_more"
+        app:showAsAction="always">
+        <menu>
+            <item android:id="@+id/search_in_room"
+                android:title="Search"
+                app:showAsAction="never"/>
+            <item android:id="@+id/room_info"
+                android:title="Info Room"
+                app:showAsAction="never"/>
+            <item android:id="@+id/starred_message"
+                android:title="Stared Message"
+                app:showAsAction="never"/>
+        </menu>
+    </item>
+</menu>

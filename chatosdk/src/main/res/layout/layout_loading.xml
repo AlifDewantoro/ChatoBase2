@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/lay"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- app:lottie_fileName="smartofficess.json" -->
+    <!-- app:lottie_fileName="chato_loading1.json" -->
+    <!--<com.airbnb.lottie.LottieAnimationView
+        android:layout_width="@dimen/dimen_180dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_8dp"
+        app:lottie_autoPlay="true"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        app:lottie_rawRes="@raw/chato15"
+        app:lottie_loop="true" />-->
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_app_space"
+        app:tint="@color/colorPrimary" />
+    <ProgressBar
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+</RelativeLayout>

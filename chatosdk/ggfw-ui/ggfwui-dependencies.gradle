@@ -1,0 +1,18 @@
+ext {
+    def general_dependencies = file('../dependencies.gradle')
+    def ggfw_android_support
+
+    if(general_dependencies.canRead()){
+        ggfw_android_support = android_support
+    } else {
+        ggfw_android_support = '28.0.0'
+    }
+
+
+    versions = [
+
+    ]
+    libraries = [
+
+    ]
+}

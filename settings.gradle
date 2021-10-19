@@ -1,0 +1,7 @@
+rootProject.name = "ChatoBase"
+include ':app'
+include ':chatosdk:chato-widget'
+include ':chatosdk'
+include ':chatosdk:ggfw-ui'
+include ':chatosdk:chato-emoticon'
+include ':chatosdk:ggfw'

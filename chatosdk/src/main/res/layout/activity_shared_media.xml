@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".app.sharedmedia.SharedMediaActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:elevation="0dp"
+        android:stateListAnimator="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_56dp">
+            <com.gamatechno.chato.sdk.utils.ChatoToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@color/white"
+                app:titleTextColor="@color/grey_800"
+                app:title="SmartOffice"
+                app:subtitleTextAppearance="@style/ToolbarSubtitleAppearance"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+            </com.gamatechno.chato.sdk.utils.ChatoToolbar>
+
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey_300"/>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

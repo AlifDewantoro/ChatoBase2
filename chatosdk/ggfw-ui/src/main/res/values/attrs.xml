@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ The MIT License (MIT)
+  ~
+  ~ Copyright (c) 2018. Shendy Aditya Syamsudin
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in
+  ~ all copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  ~ THE SOFTWARE.
+  -->
+
+<resources>
+
+    <declare-styleable name="PersistentSearchView">
+        <attr name="persistentSV_searchTextColor" format="color"/>
+        <attr name="persistentSV_logoDrawable" format="reference"/>
+        <attr name="persistentSV_logoString" format="string"/>
+        <attr name="persistentSV_editTextColor" format="color"/>
+        <attr name="persistentSV_editHintText" format="string"/>
+        <attr name="persistentSV_editHintTextColor" format="color"/>
+        <attr name="persistentSV_searchCardElevation" format="dimension"/>
+        <attr name="persistentSV_displayMode" format="enum">
+            <enum name="menuItem" value="0" />
+            <enum name="toolbar" value="1" />
+        </attr>
+        <attr name="persistentSV_homeButtonColor" format="color"/>
+        <attr name="persistentSV_customToolbarHeight" format="dimension"/>
+        <attr name="persistentSV_homeButtonMode" format="enum">
+            <enum name="arrow" value="0" />
+            <enum name="burger" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="PagerIndicator">
+        <!-- indicator visibility -->
+        <attr name="visibility" format="enum">
+            <enum name="visible" value="0"/>
+            <enum name="invisible" value="1"/>
+        </attr>
+
+        <attr name="shape" format="enum">
+            <enum value="0" name="oval"/>
+            <enum value="1" name="rect"/>
+        </attr>
+
+        <attr name="selected_color" format="color"/>
+        <attr name="unselected_color" format="color"/>
+
+        <!-- indicator style -->
+        <attr name="selected_drawable" format="reference"/>
+        <attr name="unselected_drawable" format="reference"/>
+
+        <attr name="selected_width" format="dimension"/>
+        <attr name="selected_height" format="dimension"/>
+
+        <attr name="unselected_width" format="dimension"/>
+        <attr name="unselected_height" format="dimension"/>
+
+        <attr name="padding_left" format="dimension"/>
+        <attr name="padding_right" format="dimension"/>
+        <attr name="padding_top" format="dimension"/>
+        <attr name="padding_bottom" format="dimension"/>
+
+        <attr name="selected_padding_left" format="dimension"/>
+        <attr name="selected_padding_right" format="dimension"/>
+        <attr name="selected_padding_top" format="dimension"/>
+        <attr name="selected_padding_bottom" format="dimension"/>
+
+        <attr name="unselected_padding_left" format="dimension"/>
+        <attr name="unselected_padding_right" format="dimension"/>
+        <attr name="unselected_padding_top" format="dimension"/>
+        <attr name="unselected_padding_bottom" format="dimension"/>
+
+
+    </declare-styleable>
+
+    <declare-styleable name="Themes">
+        <attr name="SliderStyle" format="reference"/>
+        <attr name="PagerIndicatorStyle" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="AvatarView">
+        <attr name="av_border_color" format="color" />
+        <attr name="av_border_width" format="dimension" />
+        <attr name="av_text_size_percentage" format="integer" />
+    </declare-styleable>
+
+    <!--SearchView-->
+
+    <declare-styleable name="SearchView">
+        <attr name="search_version" format="enum">
+            <enum name="toolbar" value="1000" />
+            <enum name="menu_item" value="1001" />
+        </attr>
+        <attr name="search_version_margins" format="enum">
+            <enum name="toolbar_small" value="2000" />
+            <enum name="toolbar_big" value="2001" />
+            <enum name="menu_item" value="2002" />
+        </attr>
+        <attr name="search_theme" format="enum">
+            <enum name="light" value="3000" />
+            <enum name="dark" value="3001" />
+            <enum name="play_store" value="3002" />
+        </attr>
+        <attr name="search_height" format="dimension" />
+        <attr name="search_navigation_icon" format="integer" />
+        <attr name="search_icon_color" format="color" />
+        <attr name="search_background_color" format="color" />
+        <attr name="search_text_color" format="color" />
+        <attr name="search_text_highlight_color" format="color" />
+        <attr name="search_text_size" format="dimension" />
+        <attr name="search_text_style" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="bold" value="1" />
+            <enum name="italic" value="2" />
+            <enum name="bold_italic" value="3" />
+        </attr>
+        <attr name="search_hint" format="string" />
+        <attr name="search_hint_color" format="color" />
+        <attr name="search_voice" format="boolean" />
+        <attr name="search_voice_text" format="string" />
+        <attr name="search_animation_duration" format="integer" />
+        <attr name="search_shadow" format="boolean" />
+        <attr name="search_shadow_color" format="boolean" />
+        <attr name="search_elevation" format="dimension" />
+        <attr name="search_clear_on_open" format="boolean" />
+        <attr name="search_clear_on_close" format="boolean" />
+        <attr name="search_hide_on_keyboard_close" format="boolean" />
+        <attr name="search_show_progress" format="boolean" />
+        <attr name="search_cursor_drawable" format="integer" />
+    </declare-styleable>
+
+    <!--Timeline View-->
+
+    <declare-styleable name="timeline_style" >
+        <attr name="marker" format="color|reference"/>
+        <attr name="line" format="color|reference"/>
+        <attr name="markerSize" format="dimension"/>
+        <attr name="lineSize" format="dimension"/>
+        <attr name="lineOrientation" format="enum">
+            <enum name="horizontal" value="0"/>
+            <enum name="vertical" value="1"/>
+        </attr>
+        <attr name="linePadding" format="dimension"/>
+        <attr name="markerInCenter" format="boolean"/>
+    </declare-styleable>
+
+    <!--AcrMenu-->
+    <attr name="fromDegrees" format="float|reference" />
+    <attr name="toDegrees" format="float|reference" />
+    <attr name="childSize" format="dimension|reference" />
+
+    <declare-styleable name="ArcLayout">
+        <attr name="fromDegrees"/>
+        <attr name="toDegrees"/>
+        <attr name="childSize"/>
+    </declare-styleable>
+
+    <declare-styleable name="ArcMenu">
+        <attr name="fromDegrees"/>
+        <attr name="toDegrees"/>
+        <attr name="childSize"/>
+    </declare-styleable>
+
+    <declare-styleable name="RayLayout">
+        <attr name="leftHolderWidth" format="dimension" />
+    </declare-styleable>
+
+
+    <!--AutoLabel-->
+    <declare-styleable name="LabelsView">
+        <attr name="max_labels" format="integer" />
+        <attr name="show_cross" format="boolean" />
+        <attr name="icon_cross" format="reference" />
+        <attr name="txt_color" format="color"/>
+        <attr name="txt_size" format="dimension"/>
+        <attr name="label_background_res" format="reference"/>
+        <attr name="label_clickable" format="boolean" />
+        <attr name="label_padding" format="dimension"/>
+    </declare-styleable>
+</resources>

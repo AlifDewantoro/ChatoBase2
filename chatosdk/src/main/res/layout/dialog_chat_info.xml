@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lay_dialog"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.gamatechno.chato.sdk.app.chatinfo.DialogChatInfo">
+    <androidx.recyclerview.widget.RecyclerView
+        android:padding="@dimen/dimen_8dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:id="@+id/rv_info"
+        android:layout_height="wrap_content">
+    </androidx.recyclerview.widget.RecyclerView>
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="0dp"
+        app:cardBackgroundColor="@color/grey_100"
+        app:cardElevation="@dimen/dimen_2dp"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/rv_info"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:padding="@dimen/dimen_16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:src="@drawable/ic_double_tick_blue"
+                    android:layout_width="@dimen/dimen_18dp"
+                    android:layout_height="@dimen/dimen_18dp" />
+                <TextView
+                    android:text="Dibaca"
+                    style="@style/Text.Standard.Bold"
+                    android:layout_marginLeft="@dimen/dimen_8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <TextView
+                android:text="-"
+                android:id="@+id/tv_read"
+                android:layout_marginTop="@dimen/dimen_4dp"
+                style="@style/Text.Standard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_marginTop="@dimen/dimen_16dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:background="@color/grey_300">
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/dimen_16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:src="@drawable/ic_double_tick_indicator"
+                    android:layout_width="@dimen/dimen_18dp"
+                    android:layout_height="@dimen/dimen_18dp" />
+                <TextView
+                    style="@style/Text.Standard.Bold"
+                    android:text="Diterima"
+                    android:layout_marginLeft="@dimen/dimen_8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tv_delivered"
+                android:layout_marginTop="@dimen/dimen_4dp"
+                android:text="-"
+                style="@style/Text.Standard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

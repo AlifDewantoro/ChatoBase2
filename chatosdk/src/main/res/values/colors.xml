@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5956FF</color>
+    <color name="colorPrimaryDark">#42B6B2</color>
+    <color name="colorPrimarySoft">#79B9EA</color>
+    <!--<color name="colorPrimaryDark">#12AF80</color>
+    <color name="colorPrimaryDark">#12AF80</color>-->
+    <!--<color name="colorAccent">#5592e3</color>-->
+    <color name="colorAccent">#0065B1</color>
+    <color name="colorAccent2">#0657A3</color>
+    <color name="colorAccent3">#253644</color>
+
+
+    <color name="colorBubble">#E4EFD7</color>
+    <color name="black2">#ACB5BD</color>
+    <color name="colorGray4">#495057</color>
+    <color name="colorBlack">#212429</color>
+    <!--<color name="colorBubbleActive">#dcedc8</color>-->
+    <color name="colorBubbleActive">#7D7AFF</color>
+    <color name="colorOppositeChatBubble">#EEEEFF</color>
+    <color name="buttonTransparentWhite">#80FFFFFF</color>
+    <color name="colorGreyMid">#464646</color>
+    <color name="greyLight">#6E8B99</color>
+    <color name="greyDark">#143647</color>
+    <color name="colorToolbar">#42B6B2</color>
+    <color name="colorToolbarText">#F9F9FC</color>
+    <color name="colorMonocrome10">#F9F9FC</color>
+    <color name="colorMonocrome20">#e9e9f7</color>
+    <color name="colorMonocrome30">#E1E3F5</color>
+    <color name="colorMonocrome40">#D5D8F2</color>
+    <color name="colorMonocrome50">#B3B7D5</color>
+    <color name="colorMonocrome60">#9398B8</color>
+    <color name="colorMonocrome70">#767A9B</color>
+    <color name="colorMonocrome90">#424560</color>
+    <color name="colorMonocrome100">#2B2E43</color>
+    <color name="colorMonocrome60_80">#809398B8</color>
+    <color name="colorTosca10">#F1FFFE</color>
+    <color name="colorTosca30">#B3FFFD</color>
+    <color name="colorTosca70">#42B6B3</color>
+    <color name="colorPurple10">#EEEEFF</color>
+    <color name="colorPurple20">#C8C7FF</color>
+    <color name="colorPurple30">#A2A1FF</color>
+    <color name="colorPurple50">#5653FC</color>
+    <color name="light_grey_translucent">#80FEFEFE</color>
+    <color name="light_grey_border">#F8F9FA</color>
+    <color name="light_purple_alternative">#EEEEFF</color>
+    <color name="colorPrimaryText">#888888</color>
+    <color name="colorDragAble">#C4C4C4</color>
+    <color name="colorRedNotif">#F03D3E</color>
+    <color name="colorPrimarySofter">#F9F9FC</color>
+</resources>

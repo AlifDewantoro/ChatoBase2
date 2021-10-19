@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_64dp"
+    android:orientation="horizontal"
+    style="@style/clickable"
+    android:clickable="true"
+    android:focusable="true">
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <com.gamatechno.ggfw_ui.avatarview.views.AvatarView
+            android:id="@+id/ava_mention"
+            android:layout_width="@dimen/dimen_38dp"
+            android:layout_height="@dimen/dimen_38dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/dimen_10dp"
+            android:src="@drawable/ic_logo_space"/>
+        <TextView
+            android:id="@+id/tv_mention_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Text.Standard"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:layout_gravity="center_vertical"
+            android:text="Name"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/grey_300"
+        android:layout_marginLeft="@dimen/dimen_56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_height="0.3dp">
+
+    </LinearLayout>
+</RelativeLayout>

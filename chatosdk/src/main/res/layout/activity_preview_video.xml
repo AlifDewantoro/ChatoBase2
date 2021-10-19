@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.commit451.elasticdragdismisslayout.ElasticDragDismissLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/draggable_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:dragDismissDistance="112dp"
+    android:background="@color/grey_800"
+    tools:context="com.gamatechno.chato.sdk.app.playvideo.PlayVideoActivity"
+    app:dragDismissScale="0.95">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <VideoView
+            android:id="@+id/videoview"
+            android:transitionName="video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" />
+
+        <include
+            layout="@layout/toolbar_main_flat_transparent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lay_action_chat"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/shadow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.gamatechno.chato.sdk.utils.animation.AnimationToggle
+                android:id="@+id/lay_action"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true">
+                <ProgressBar
+                    android:id="@+id/pb_ok"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/dimen_8dp"
+                    android:layout_width="@dimen/dimen_24dp"
+                    android:layout_height="@dimen/dimen_24dp" />
+                <ImageView
+                    android:visibility="gone"
+                    style="@style/clickable"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/img_attach"
+                    android:padding="@dimen/dimen_8dp"
+                    android:id="@+id/img_ok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_send"
+                    android:tint="@color/grey_700"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+            </com.gamatechno.chato.sdk.utils.animation.AnimationToggle>
+
+            <ImageView
+                app:layout_goneMarginLeft="@dimen/dimen_8dp"
+                android:id="@+id/img_emoticon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_8dp"
+                android:src="@drawable/ic_tag_faces_black_24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.gamatechno.chato.sdk.utils.ChatoEditText.ChatEditText
+                android:id="@+id/edt_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:emojiconSize="28sp"
+                android:padding="@dimen/dimen_4dp"
+                style="@style/Text.Standard"
+                android:layout_marginStart="40dp"
+                android:maxLines="4"
+                android:layout_marginLeft="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@null"
+                android:hint="Ketik Pesan"
+                android:inputType="textCapSentences|textMultiLine"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/lay_action"
+                app:layout_constraintStart_toEndOf="@+id/img_emoticon"
+                app:layout_constraintTop_toTopOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+</com.commit451.elasticdragdismisslayout.ElasticDragDismissLinearLayout>
+
+

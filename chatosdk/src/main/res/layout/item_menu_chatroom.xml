@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu_search"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:paddingTop="@dimen/dimen_16dp"
+    android:paddingBottom="@dimen/dimen_16dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    style="@style/clickable"
+    android:clickable="true"
+    android:focusable="true">
+<!--    android:layout_height="@dimen/dimen_76dp"-->
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:tint="@color/colorPrimary"
+        android:src="@drawable/ic_chato_search"/>
+    <TextView
+        android:id="@+id/tv_title"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="2"
+        android:gravity="center"
+        android:textSize="13sp"
+        android:text="Pesan Berbintang"/>
+    </LinearLayout>

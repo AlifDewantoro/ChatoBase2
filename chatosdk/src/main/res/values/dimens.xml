@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="text_verysmall">7.5sp</dimen>
+    <dimen name="text_small">9sp</dimen>
+    <dimen name="text_small_2">10sp</dimen>
+    <dimen name="text_small_3">12sp</dimen>
+    <dimen name="text_regular">14sp</dimen>
+    <dimen name="text_medium">16sp</dimen>
+    <dimen name="text_large">18sp</dimen>
+    <dimen name="text_verylarge">20sp</dimen>
+    <dimen name="text_huge">22sp</dimen>
+    <dimen name="text_sohuge">24sp</dimen>
+    <dimen name="text_excellent">28sp</dimen>
+    <dimen name="text_excellentone">32sp</dimen>
+
+    <dimen name="margin_item_horizontal">22sp</dimen>
+
+    <dimen name="padding_item_small">6sp</dimen>
+    <dimen name="padding_item_default">16sp</dimen>
+    <dimen name="padding_item_default2">22sp</dimen>
+    <dimen name="padding_item_verysmall">2sp</dimen>
+    <!--<dimen name="padding_item_small">4sp</dimen>-->
+    <dimen name="padding_item_main">15sp</dimen>
+
+    <!--<dimen name="avatar_dimen">48dp</dimen>-->
+    <dimen name="avatar_dimen">44dp</dimen>
+    <dimen name="actionbar_dimen">56dp</dimen>
+
+    <dimen name="design_bottom_navigation_text_size" tools:override="true">9sp</dimen>
+    <dimen name="design_bottom_navigation_active_text_size" tools:override="true">10sp</dimen>
+
+    <dimen name="chat_attachment_image_height">200dp</dimen>
+    <dimen name="chat_attachment_image_holder">250dp</dimen>
+
+    <dimen name="flexible_space_image_height">220dp</dimen>
+
+    <dimen name="emoji_size">20sp</dimen>
+    <dimen name="text_plain">14sp</dimen>
+    <dimen name="text_h1_size">96sp</dimen>
+    <dimen name="text_h2_size">64sp</dimen>
+    <dimen name="text_h3_size">48sp</dimen>
+    <dimen name="text_h4_size">32sp</dimen>
+    <dimen name="text_h5_size">24sp</dimen>
+    <dimen name="text_h6_size">20sp</dimen>
+</resources>

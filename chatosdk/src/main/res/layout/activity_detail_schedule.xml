@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/toolbar_white_line"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dimen_8dp"
+            android:paddingStart="@dimen/dimen_16dp"
+            android:paddingEnd="@dimen/dimen_16dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Text.Standard"
+                android:layout_marginBottom="@dimen/dimen_6dp"
+                android:text="Pengaju"/>
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                style="@style/Text.Standard"
+                android:layout_marginBottom="@dimen/dimen_6dp"
+                android:text="M. ABCDFGH"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:background="@color/grey_300"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_6dp"
+                style="@style/Text.Standard"
+                android:layout_marginBottom="@dimen/dimen_6dp"
+                android:text="Tempat"/>
+            <TextView
+                android:id="@+id/tv_place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                style="@style/Text.Standard"
+                android:layout_marginBottom="@dimen/dimen_6dp"
+                android:text="Ruangan Demo Room"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:background="@color/grey_300"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_6dp"
+                style="@style/Text.Standard"
+                android:layout_marginBottom="@dimen/dimen_6dp"
+                android:text="Waktu"/>
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                style="@style/Text.Standard"
+                android:layout_marginBottom="@dimen/dimen_6dp"
+                android:text="9 Juli 2020, 10.00-12.00"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:background="@color/grey_300"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_6dp"
+                android:layout_marginBottom="@dimen/dimen_6dp"
+                android:text="Deskripsi"/>
+
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                style="@style/Text.Standard"
+                android:layout_marginBottom="@dimen/dimen_6dp"
+                android:text="Rapat mingguan gms"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:background="@color/grey_300"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Text.Standard"
+                android:layout_marginTop="@dimen/dimen_6dp"
+                android:layout_marginBottom="@dimen/dimen_6dp"
+                android:text="Partisipan"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_12dp"/>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_16dp"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btn_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/clickable"
+            android:padding="@dimen/dimen_8dp"
+            android:gravity="center"
+            android:background="@drawable/bg_rounded_button"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:drawableStart="@drawable/ic_pencil_edit"
+            android:drawableTint="@color/blue"
+            android:text="Ubah"/>
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/clickable"
+            android:gravity="center"
+            android:padding="@dimen/dimen_8dp"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:background="@drawable/bg_rounded_button"
+            android:backgroundTint="@color/red_600"
+            android:textColor="@color/red_600"
+            android:drawableStart="@drawable/ic_delete_message"
+            android:drawableTint="@color/red_600"
+            android:text="Hapus"/>
+    </LinearLayout>
+</LinearLayout>

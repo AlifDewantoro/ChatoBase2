@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="last_seen_today">Terakhir dilihat</string>
+    <string name="last_seen_yesterday">Terakhir dilihat kemarin</string>
+    <string name="days_ago">hari yang lalu</string>
+    <string name="add_member">Tambah Anggota</string>
+    <string name="exit_group">Keluar Grup</string>
+    <string name="only_admin_restriction_notif">Hanya admin yang dapat menambah anggota</string>
+    <string name="cancel">Batal</string>
+    <string name="yes">Ya</string>
+    <string name="out_from_group">Keluar dari Grup</string>
+    <string name="out_from_group_question">Apakah anda yakin keluar dari grup ini?</string>
+</resources>

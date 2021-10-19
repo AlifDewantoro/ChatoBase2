@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ The MIT License (MIT)
+  ~
+  ~ Copyright (c) 2017. Shendy Aditya Syamsudin
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in
+  ~ all copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  ~ THE SOFTWARE.
+  -->
+
+<resources>
+
+    <!--appintro-->
+    <dimen name="appIntroBottomBarHeight">64dp</dimen>
+    <dimen name="appIntro2BottomBarHeight">80dp</dimen>
+
+    <dimen name="appIntroDefaultPaddingTop">40dp</dimen>
+    <dimen name="appIntroDefaultPaddingLeft">16dp</dimen>
+    <dimen name="appIntroDefaultPaddingRight">16dp</dimen>
+    <dimen name="appIntroDefaultPaddingBottom">16dp</dimen>
+
+    <dimen name="appIntroDefaultPaddingBottomIntro1">80dp</dimen>
+    <dimen name="appIntroDefaultPaddingBottomIntro2">96dp</dimen>
+
+    <dimen name="appIntroHeadingTextSize">28dp</dimen>
+    <!--end of appintro-->
+
+    <dimen name="search_card_visible_padding_toolbar_mode">8dp</dimen>
+    <dimen name="search_card_visible_padding_menu_item_mode">4dp</dimen>
+    <dimen name="search_card_default_card_elevation">2dp</dimen>
+    <dimen name="search_card_height">48dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!--Crash-->
+
+    <dimen name="customactivityoncrash_activity_horizontal_margin">16dp</dimen>
+    <dimen name="customactivityoncrash_activity_vertical_margin">16dp</dimen>
+    <dimen name="customactivityoncrash_error_activity_error_details_text_size">12sp</dimen>
+
+
+    <dimen name="av_default_border_width">2dp</dimen>
+    <dimen name="av_default_height">75dp</dimen>
+    <dimen name="av_default_width">75dp</dimen>
+
+<!--Search View-->
+    <dimen name="search_height">46dp</dimen>
+
+    <dimen name="search_key_line_8">8dp</dimen>
+    <dimen name="search_key_line_16">16dp</dimen>
+    <dimen name="search_divider">1dp</dimen>
+
+    <dimen name="search_item_height">56dp</dimen>
+    <dimen name="search_icon">56dp</dimen>
+    <dimen name="search_progress">24dp</dimen>
+    <dimen name="search_text_small">14sp</dimen>
+    <dimen name="search_text_medium">16sp</dimen>
+    <dimen name="search_reveal">24dp</dimen>
+
+    <dimen name="search_filter_margin_top">4dp</dimen>
+    <dimen name="search_filter_margin_start">12dp</dimen>
+
+    <dimen name="dimen_1dp">1dp</dimen>
+    <dimen name="dimen_2dp">2dp</dimen>
+    <dimen name="dimen_3dp">3dp</dimen>
+    <dimen name="dimen_4dp">4dp</dimen>
+    <dimen name="dimen_6dp">6dp</dimen>
+    <dimen name="dimen_8dp">8dp</dimen>
+    <dimen name="dimen_10dp">10dp</dimen>
+    <dimen name="dimen_12dp">12dp</dimen>
+    <dimen name="dimen_14dp">14dp</dimen>
+    <dimen name="dimen_16dp">16dp</dimen>
+    <dimen name="dimen_18dp">18dp</dimen>
+    <dimen name="dimen_20dp">20dp</dimen>
+    <dimen name="dimen_24dp">24dp</dimen>
+    <dimen name="dimen_22dp">22dp</dimen>
+    <dimen name="dimen_32dp">32dp</dimen>
+    <dimen name="dimen_36dp">36dp</dimen>
+    <dimen name="dimen_38dp">38dp</dimen>
+    <dimen name="dimen_40dp">40dp</dimen>
+    <dimen name="dimen_42dp">42dp</dimen>
+    <dimen name="dimen_48dp">48dp</dimen>
+    <dimen name="dimen_56dp">56dp</dimen>
+    <dimen name="dimen_64dp">64dp</dimen>
+    <dimen name="dimen_72dp">72dp</dimen>
+    <dimen name="dimen_76dp">76dp</dimen>
+    <dimen name="dimen_80dp">80dp</dimen>
+    <dimen name="dimen_96dp">96dp</dimen>
+    <dimen name="dimen_108dp">108dp</dimen>
+    <dimen name="dimen_128dp">128dp</dimen>
+    <dimen name="dimen_140dp">140dp</dimen>
+    <dimen name="dimen_160dp">160dp</dimen>
+    <dimen name="dimen_180dp">180dp</dimen>
+    <dimen name="dimen_192dp">192dp</dimen>
+    <dimen name="dimen_224dp">224dp</dimen>
+    <dimen name="dimen_256dp">256dp</dimen>
+    <dimen name="dimen_280dp">280dp</dimen>
+    <dimen name="dimen_300dp">300dp</dimen>
+    <dimen name="dimen_420dp">420dp</dimen>
+
+
+
+</resources>

@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SocialViewStyle">
+        <attr name="socialViewStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SocialView">
+
+        <!-- Determine whether each feature should be turned on/off.
+             Default is all true. -->
+        <attr name="socialFlags">
+            <flag name="hashtag" value="1" />
+            <flag name="mention" value="2" />
+            <flag name="hyperlink" value="4" />
+        </attr>
+
+        <!-- Color of each feature.
+             If particular feature is not enabled, this value will be ignored.
+             Default is color accent of current theme. -->
+        <attr name="hashtagColor" format="color" />
+        <attr name="mentionColor" format="color" />
+        <attr name="hyperlinkColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="AvatarImageBehavior">
+        <attr name="finalXPosition" format="dimension"/>
+        <attr name="finalYPosition" format="dimension"/>
+        <attr name="finalHeight" format="dimension"/>
+        <attr name="finalToolbarHeight" format="dimension"/>
+    </declare-styleable>
+    <declare-styleable name="CardView">
+        <!-- Background color for CardView. -->
+        <attr format="color" name="cardBackgroundColor"/>
+        <!-- Corner radius for CardView. -->
+        <attr format="dimension" name="cardCornerRadius"/>
+        <!-- Elevation for CardView. -->
+        <attr format="dimension" name="cardElevation"/>
+        <!-- Maximum Elevation for CardView. -->
+        <attr format="dimension" name="cardMaxElevation"/>
+        <!-- Add padding in API v21+ as well to have the same measurements with previous versions. -->
+        <attr format="boolean" name="cardUseCompatPadding"/>
+        <!-- Add padding to CardView on v20 and before to prevent intersections between the Card content and rounded corners. -->
+        <attr format="boolean" name="cardPreventCornerOverlap"/>
+        <!-- Inner padding between the edges of the Card and children of the CardView. -->
+        <attr format="dimension" name="contentPadding"/>
+        <!-- Inner padding between the left edge of the Card and children of the CardView. -->
+        <attr format="dimension" name="contentPaddingLeft"/>
+        <!-- Inner padding between the right edge of the Card and children of the CardView. -->
+        <attr format="dimension" name="contentPaddingRight"/>
+        <!-- Inner padding between the top edge of the Card and children of the CardView. -->
+        <attr format="dimension" name="contentPaddingTop"/>
+        <!-- Inner padding between the bottom edge of the Card and children of the CardView. -->
+        <attr format="dimension" name="contentPaddingBottom"/>
+        <!-- Workaround to read user defined minimum width -->
+        <attr name="android:minWidth"/>
+        <!-- Workaround to read user defined minimum height -->
+        <attr name="android:minHeight"/>
+    </declare-styleable>
+    <declare-styleable name="Emojicon"><attr format="dimension" name="emojiconSize"/>
+        <attr format="enum" name="emojiconAlignment">
+            <enum name="bottom" value="0"/>
+            <enum name="baseline" value="1"/>
+        </attr>
+        <attr format="integer" name="emojiconTextStart"/>
+        <attr format="integer" name="emojiconTextLength"/>
+        <attr format="boolean" name="emojiconUseSystemDefault"/>
+    </declare-styleable>
+    <declare-styleable name="FloatingActionButton"><attr name="backgroundTint"/><attr name="backgroundTintMode"/><attr name="rippleColor"/><attr name="fabSize">
+
+        <enum name="auto" value="-1"/>
+
+        <enum name="normal" value="0"/>
+
+        <enum name="mini" value="1"/>
+        </attr><attr format="dimension" name="fabCustomSize"/><attr name="elevation"/><attr format="dimension" name="hoveredFocusedTranslationZ"/><attr format="dimension" name="pressedTranslationZ"/><attr format="dimension" name="borderWidth"/><attr format="boolean" name="useCompatPadding"/><attr format="dimension" name="maxImageSize"/><attr name="showMotionSpec"/><attr name="hideMotionSpec"/>
+    </declare-styleable>
+<!--    <declare-styleable name="NavigationView"><attr name="android:background"/><attr name="android:fitsSystemWindows"/><attr name="android:maxWidth"/><attr name="elevation"/><attr format="reference" name="menu"/><attr format="color" name="itemIconTint"/><attr format="color" name="itemTextColor"/><attr format="reference" name="itemBackground"/><attr format="reference" name="itemTextAppearance"/><attr format="reference" name="headerLayout"/><attr format="dimension" name="itemHorizontalPadding"/><attr format="dimension" name="itemIconPadding"/></declare-styleable>-->
+    <declare-styleable name="BottomNavigationView"><attr name="menu"/><attr name="labelVisibilityMode">
+
+        <enum name="auto" value="-1"/>
+
+        <enum name="selected" value="0"/>
+
+        <enum name="labeled" value="1"/>
+
+        <enum name="unlabeled" value="2"/>
+    </attr><attr name="itemBackground"/><attr format="dimension" name="itemIconSize"/><attr name="itemIconTint"/><attr format="reference" name="itemTextAppearanceInactive"/><attr format="reference" name="itemTextAppearanceActive"/><attr name="itemTextColor"/><attr format="boolean" name="itemHorizontalTranslationEnabled"/><attr name="elevation"/></declare-styleable>
+    <declare-styleable name="NavigationView"><attr name="android:background"/><attr name="android:fitsSystemWindows"/><attr name="android:maxWidth"/><attr name="elevation"/><attr format="reference" name="menu"/><attr format="color" name="itemIconTint"/><attr format="color" name="itemTextColor"/><attr format="reference" name="itemBackground"/><attr format="reference" name="itemTextAppearance"/><attr format="reference" name="headerLayout"/><attr format="dimension" name="itemHorizontalPadding"/><attr format="dimension" name="itemIconPadding"/></declare-styleable>
+    <declare-styleable name="AppBarLayout_Layout"><attr name="layout_scrollFlags">
+
+        <flag name="scroll" value="0x1"/>
+
+
+        <flag name="exitUntilCollapsed" value="0x2"/>
+
+
+        <flag name="enterAlways" value="0x4"/>
+
+
+        <flag name="enterAlwaysCollapsed" value="0x8"/>
+
+
+        <flag name="snap" value="0x10"/>
+
+
+        <flag name="snapMargins" value="0x20"/>
+    </attr><attr format="reference" name="layout_scrollInterpolator"/></declare-styleable>
+
+    <declare-styleable name="CollapsingToolbarLayout"><attr format="dimension" name="expandedTitleMargin"/><attr format="dimension" name="expandedTitleMarginStart"/><attr format="dimension" name="expandedTitleMarginTop"/><attr format="dimension" name="expandedTitleMarginEnd"/><attr format="dimension" name="expandedTitleMarginBottom"/><attr format="reference" name="expandedTitleTextAppearance"/><attr format="reference" name="collapsedTitleTextAppearance"/><attr format="color" name="contentScrim"/><attr format="color" name="statusBarScrim"/><attr format="reference" name="toolbarId"/><attr format="dimension" name="scrimVisibleHeightTrigger"/><attr format="integer" name="scrimAnimationDuration"/><attr name="collapsedTitleGravity">
+
+        <flag name="top" value="0x30"/>
+
+        <flag name="bottom" value="0x50"/>
+
+        <flag name="left" value="0x03"/>
+
+        <flag name="right" value="0x05"/>
+
+        <flag name="center_vertical" value="0x10"/>
+
+        <flag name="fill_vertical" value="0x70"/>
+
+        <flag name="center_horizontal" value="0x01"/>
+
+        <flag name="center" value="0x11"/>
+
+        <flag name="start" value="0x00800003"/>
+
+        <flag name="end" value="0x00800005"/>
+    </attr><attr name="expandedTitleGravity">
+
+        <flag name="top" value="0x30"/>
+
+        <flag name="bottom" value="0x50"/>
+
+        <flag name="left" value="0x03"/>
+
+        <flag name="right" value="0x05"/>
+
+        <flag name="center_vertical" value="0x10"/>
+
+        <flag name="fill_vertical" value="0x70"/>
+
+        <flag name="center_horizontal" value="0x01"/>
+
+        <flag name="center" value="0x11"/>
+
+        <flag name="start" value="0x00800003"/>
+
+        <flag name="end" value="0x00800005"/>
+    </attr><attr format="boolean" name="titleEnabled"/><attr name="title"/></declare-styleable>
+
+    <declare-styleable name="ElasticDragDismissFrameLayout"><attr format="dimension" name="dragDismissDistance"/><attr format="float" name="dragDismissFraction"/><attr format="float" name="dragDismissScale"/><attr format="float" name="dragElasticity"/><attr format="boolean" name="ignoreNestedScrollWarnings"/></declare-styleable>
+
+    <declare-styleable name="TextInputLayout"><attr name="android:textColorHint"/><attr name="android:hint"/><attr format="boolean" name="hintEnabled"/><attr format="boolean" name="hintAnimationEnabled"/><attr format="reference" name="hintTextAppearance"/><attr format="string" name="helperText"/><attr format="boolean" name="helperTextEnabled"/><attr format="reference" name="helperTextTextAppearance"/><attr format="boolean" name="errorEnabled"/><attr format="reference" name="errorTextAppearance"/><attr format="boolean" name="counterEnabled"/><attr format="integer" name="counterMaxLength"/><attr format="reference" name="counterTextAppearance"/><attr format="reference" name="counterOverflowTextAppearance"/><attr format="boolean" name="passwordToggleEnabled"/><attr format="reference" name="passwordToggleDrawable"/><attr format="string" name="passwordToggleContentDescription"/><attr format="color" name="passwordToggleTint"/><attr name="passwordToggleTintMode">
+
+        <enum name="src_over" value="3"/>
+
+        <enum name="src_in" value="5"/>
+
+        <enum name="src_atop" value="9"/>
+
+        <enum name="multiply" value="14"/>
+
+        <enum name="screen" value="15"/>
+    </attr><attr name="boxBackgroundMode">
+
+        <enum name="none" value="0"/>
+
+        <enum name="filled" value="1"/>
+
+        <enum name="outline" value="2"/>
+    </attr><attr format="dimension" name="boxCollapsedPaddingTop"/><attr format="dimension" name="boxCornerRadiusTopStart"/><attr format="dimension" name="boxCornerRadiusTopEnd"/><attr format="dimension" name="boxCornerRadiusBottomStart"/><attr format="dimension" name="boxCornerRadiusBottomEnd"/><attr format="color" name="boxStrokeColor"/><attr format="color" name="boxBackgroundColor"/><attr format="dimension" name="boxStrokeWidth"/></declare-styleable>
+
+    <declare-styleable name="CollapsingToolbarLayout_Layout"><attr name="layout_collapseMode">
+
+        <enum name="none" value="0"/>
+
+        <enum name="pin" value="1"/>
+
+        <enum name="parallax" value="2"/>
+    </attr><attr format="float" name="layout_collapseParallaxMultiplier"/></declare-styleable>
+
+    <declare-styleable name="ActionBar">
+        <!-- The type of navigation to use. -->
+        <attr name="navigationMode">
+            <!-- Normal static title text -->
+            <enum name="normal" value="0"/>
+            <!-- The action bar will use a selection list for navigation. -->
+            <enum name="listMode" value="1"/>
+            <!-- The action bar will use a series of horizontal tabs for navigation. -->
+            <enum name="tabMode" value="2"/>
+        </attr>
+        <!-- Options affecting how the action bar is displayed. -->
+        <attr name="displayOptions">
+            <flag name="none" value="0"/>
+            <flag name="useLogo" value="0x1"/>
+            <flag name="showHome" value="0x2"/>
+            <flag name="homeAsUp" value="0x4"/>
+            <flag name="showTitle" value="0x8"/>
+            <flag name="showCustom" value="0x10"/>
+            <flag name="disableHome" value="0x20"/>
+        </attr>
+        <!-- Specifies title text used for navigationMode="normal" -->
+        <attr name="title"/>
+        <!-- Specifies subtitle text used for navigationMode="normal" -->
+        <attr format="string" name="subtitle"/>
+        <!-- Specifies a style to use for title text. -->
+        <attr format="reference" name="titleTextStyle"/>
+        <!-- Specifies a style to use for subtitle text. -->
+        <attr format="reference" name="subtitleTextStyle"/>
+        <!-- Specifies the drawable used for the application icon. -->
+        <attr format="reference" name="icon"/>
+        <!-- Specifies the drawable used for the application logo. -->
+        <attr format="reference" name="logo"/>
+        <!-- Specifies the drawable used for item dividers. -->
+        <attr format="reference" name="divider"/>
+        <!-- Specifies a background drawable for the action bar. -->
+        <attr format="reference" name="background"/>
+        <!-- Specifies a background drawable for a second stacked row of the action bar. -->
+        <attr format="reference|color" name="backgroundStacked"/>
+        <!-- Specifies a background drawable for the bottom component of a split action bar. -->
+        <attr format="reference|color" name="backgroundSplit"/>
+        <!-- Specifies a layout for custom navigation. Overrides navigationMode. -->
+        <attr format="reference" name="customNavigationLayout"/>
+        <!-- Specifies a fixed height. -->
+        <attr name="height"/>
+        <!-- Specifies a layout to use for the "home" section of the action bar. -->
+        <attr format="reference" name="homeLayout"/>
+        <!-- Specifies a style resource to use for an embedded progress bar. -->
+        <attr format="reference" name="progressBarStyle"/>
+        <!-- Specifies a style resource to use for an indeterminate progress spinner. -->
+        <attr format="reference" name="indeterminateProgressStyle"/>
+        <!-- Specifies the horizontal padding on either end for an embedded progress bar. -->
+        <attr format="dimension" name="progressBarPadding"/>
+        <!-- Up navigation glyph -->
+        <attr name="homeAsUpIndicator"/>
+        <!-- Specifies padding that should be applied to the left and right sides of
+             system-provided items in the bar. -->
+        <attr format="dimension" name="itemPadding"/>
+        <!-- Set true to hide the action bar on a vertical nested scroll of content. -->
+        <attr format="boolean" name="hideOnContentScroll"/>
+        <!-- Minimum inset for content views within a bar. Navigation buttons and
+             menu views are excepted. Only valid for some themes and configurations. -->
+        <attr format="dimension" name="contentInsetStart"/>
+        <!-- Minimum inset for content views within a bar. Navigation buttons and
+             menu views are excepted. Only valid for some themes and configurations. -->
+        <attr format="dimension" name="contentInsetEnd"/>
+        <!-- Minimum inset for content views within a bar. Navigation buttons and
+             menu views are excepted. Only valid for some themes and configurations. -->
+        <attr format="dimension" name="contentInsetLeft"/>
+        <!-- Minimum inset for content views within a bar. Navigation buttons and
+             menu views are excepted. Only valid for some themes and configurations. -->
+        <attr format="dimension" name="contentInsetRight"/>
+        <!-- Minimum inset for content views within a bar when a navigation button
+             is present, such as the Up button. Only valid for some themes and configurations. -->
+        <attr format="dimension" name="contentInsetStartWithNavigation"/>
+        <!-- Minimum inset for content views within a bar when actions from a menu
+             are present. Only valid for some themes and configurations. -->
+        <attr format="dimension" name="contentInsetEndWithActions"/>
+        <!-- Elevation for the action bar itself -->
+        <attr format="dimension" name="elevation"/>
+        <!-- Reference to a theme that should be used to inflate popups
+             shown by widgets in the action bar. -->
+        <attr format="reference" name="popupTheme"/>
+    </declare-styleable>
+
+    <declare-styleable name="LottieAnimationView"><attr format="string" name="lottie_fileName"/><attr format="reference" name="lottie_rawRes"/><attr format="string" name="lottie_url"/><attr format="boolean" name="lottie_autoPlay"/><attr format="boolean" name="lottie_loop"/><attr format="enum" name="lottie_repeatMode">
+        <enum name="restart" value="1"/>
+        <enum name="reverse" value="2"/>
+    </attr><attr format="integer" name="lottie_repeatCount"/><attr format="string" name="lottie_imageAssetsFolder"/><attr format="float" name="lottie_progress"/><attr format="boolean" name="lottie_enableMergePathsForKitKatAndAbove"/><attr format="color" name="lottie_colorFilter"/><attr format="float" name="lottie_scale"/></declare-styleable>
+
+    <declare-styleable name="TabLayout"><attr format="color" name="tabIndicatorColor"/><attr format="dimension" name="tabIndicatorHeight"/><attr format="dimension" name="tabContentStart"/><attr format="reference" name="tabBackground"/><attr format="reference" name="tabIndicator"/><attr name="tabIndicatorGravity">
+
+        <enum name="bottom" value="0"/>
+
+        <enum name="center" value="1"/>
+
+        <enum name="top" value="2"/>
+
+        <enum name="stretch" value="3"/>
+    </attr><attr format="integer" name="tabIndicatorAnimationDuration"/><attr format="boolean" name="tabIndicatorFullWidth"/><attr name="tabMode">
+        <enum name="scrollable" value="0"/>
+        <enum name="fixed" value="1"/>
+    </attr><attr name="tabGravity">
+        <enum name="fill" value="0"/>
+        <enum name="center" value="1"/>
+    </attr><attr format="boolean" name="tabInlineLabel"/><attr format="dimension" name="tabMinWidth"/><attr format="dimension" name="tabMaxWidth"/><attr format="reference" name="tabTextAppearance"/><attr format="color" name="tabTextColor"/><attr format="color" name="tabSelectedTextColor"/><attr format="dimension" name="tabPaddingStart"/><attr format="dimension" name="tabPaddingTop"/><attr format="dimension" name="tabPaddingEnd"/><attr format="dimension" name="tabPaddingBottom"/><attr format="dimension" name="tabPadding"/><attr format="color" name="tabIconTint"/><attr name="tabIconTintMode">
+        <enum name="src_over" value="3"/>
+        <enum name="src_in" value="5"/>
+        <enum name="src_atop" value="9"/>
+        <enum name="multiply" value="14"/>
+        <enum name="screen" value="15"/>
+        <enum name="add" value="16"/>
+    </attr><attr format="color" name="tabRippleColor"/><attr format="boolean" name="tabUnboundedRipple"/></declare-styleable>
+
+    <declare-styleable name="FlexboxLayout"><attr name="flexDirection">
+        <enum name="row" value="0"/>
+        <enum name="row_reverse" value="1"/>
+        <enum name="column" value="2"/>
+        <enum name="column_reverse" value="3"/>
+    </attr><attr name="flexWrap">
+        <enum name="nowrap" value="0"/>
+        <enum name="wrap" value="1"/>
+        <enum name="wrap_reverse" value="2"/>
+    </attr><attr name="justifyContent">
+        <enum name="flex_start" value="0"/>
+        <enum name="flex_end" value="1"/>
+        <enum name="center" value="2"/>
+        <enum name="space_between" value="3"/>
+        <enum name="space_around" value="4"/>
+    </attr><attr name="alignItems">
+        <enum name="flex_start" value="0"/>
+        <enum name="flex_end" value="1"/>
+        <enum name="center" value="2"/>
+        <enum name="baseline" value="3"/>
+        <enum name="stretch" value="4"/>
+    </attr><attr name="alignContent">
+        <enum name="flex_start" value="0"/>
+        <enum name="flex_end" value="1"/>
+        <enum name="center" value="2"/>
+        <enum name="space_between" value="3"/>
+        <enum name="space_around" value="4"/>
+        <enum name="stretch" value="5"/>
+    </attr><attr format="reference" name="dividerDrawable"/><attr format="reference" name="dividerDrawableHorizontal"/><attr format="reference" name="dividerDrawableVertical"/><attr name="showDivider">
+        <flag name="none" value="0"/>
+        <flag name="beginning" value="1"/>
+        <flag name="middle" value="2"/>
+        <flag name="end" value="4"/>
+    </attr><attr name="showDividerHorizontal">
+        <flag name="none" value="0"/>
+        <flag name="beginning" value="1"/>
+        <flag name="middle" value="2"/>
+        <flag name="end" value="4"/>
+    </attr><attr name="showDividerVertical">
+        <flag name="none" value="0"/>
+        <flag name="beginning" value="1"/>
+        <flag name="middle" value="2"/>
+        <flag name="end" value="4"/>
+    </attr></declare-styleable>
+</resources>

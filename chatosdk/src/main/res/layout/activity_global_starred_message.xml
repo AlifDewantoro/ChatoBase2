@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gamatechno.chato.sdk.app.starredmessage.StarredMessageActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:elevation="0dp"
+        android:stateListAnimator="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_56dp">
+            <com.gamatechno.chato.sdk.utils.ChatoToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@color/white"
+                app:titleTextColor="@color/grey_800"
+                app:title="Chato"
+                app:subtitleTextAppearance="@style/ToolbarSubtitleAppearance"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+            </com.gamatechno.chato.sdk.utils.ChatoToolbar>
+            <com.gamatechno.chato.sdk.utils.animation.AnimationToggle
+                android:visibility="gone"
+                android:paddingLeft="@dimen/dimen_16dp"
+                android:paddingRight="@dimen/dimen_16dp"
+                android:id="@+id/appbar_action"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_56dp">
+
+                <ImageView
+                    android:id="@+id/img_action_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:src="@drawable/ic_arrow_back_black_24dp" />
+                <RelativeLayout
+                    android:id="@+id/lay_actionbar"
+                    android:layout_width="match_parent"
+                    android:layout_toRightOf="@+id/img_action_back"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_marginLeft="@dimen/dimen_16dp"
+                            android:clickable="true"
+                            android:id="@+id/img_star"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_action_message_star_24dp"/>
+
+                    </LinearLayout>
+                    <!--<TextView-->
+                        <!--android:layout_marginLeft="@dimen/dimen_16dp"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--style="@style/Text.Title.Banner"-->
+                        <!--android:id="@+id/tv_action_title"-->
+                        <!--android:textSize="@dimen/dimen_20dp"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="0"-->
+                        <!--android:maxLines="1"-->
+                        <!--android:ellipsize="end"-->
+                        <!--android:textColor="@color/black" />-->
+                </RelativeLayout>
+            </com.gamatechno.chato.sdk.utils.animation.AnimationToggle>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/grey_300">
+            </LinearLayout>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:visibility="gone"
+            android:layout_margin="@dimen/dimen_16dp"
+            android:textAlignment="center"
+            android:id="@+id/tv_message"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="No data here"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <include layout="@layout/layout_helper"/>
+    </RelativeLayout>
+</LinearLayout>

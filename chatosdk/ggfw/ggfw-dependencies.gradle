@@ -1,0 +1,50 @@
+ext {
+    def general_dependencies = file('../dependencies.gradle')
+    def ggfw_android_support
+
+    if(general_dependencies.canRead()){
+        ggfw_android_support = android_support
+    } else {
+        ggfw_android_support = '28.0.0'
+    }
+
+    project.logger.lifecycle(ggfw_android_support)
+
+
+    versions = [
+            exoPlayer             : '2.6.0',
+            flexbox               : '0.3.2',
+
+            volley                : '1.1.0',
+
+            glide                 : '4.8.0',
+            timber                : '4.7.0',
+            rxBinding             : '2.0.0',
+
+            fresco                : '1.9.0',
+
+            kotshi                : '1.0.2',
+
+            frescoImageViewer     : '0.5.1',
+            aVLoadingIndicatorView: '2.1.3',
+
+            // For app
+            kotlin                : '1.2.51',
+            coroutine             : '0.23.1',
+    ]
+    libraries = [
+            appCompat             : "com.android.support:appcompat-v7:${ggfw_android_support}",
+            volley                : "com.android.volley:volley:${versions.volley}",
+            // GGFW UI
+            design                : "com.android.support:design:${ggfw_android_support}",
+            recyclerview          : "com.android.support:recyclerview-v7:${ggfw_android_support}",
+            cardview              : "com.android.support:cardview-v7:${ggfw_android_support}",
+            glide                 : "com.github.bumptech.glide:glide:${versions.glide}",
+            glide_annotation      : "com.github.bumptech.glide:compiler:${versions.glide}",
+
+            // For testing
+//            junit                 : "junit:junit:${versions.junit}",
+            multidex              : "com.android.support:multidex:1.0.2",
+            gson                  : "com.google.code.gson:gson:2.8.5"
+    ]
+}

@@ -1,0 +1,307 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+//apply plugin: 'com.github.dcendents.android-maven'
+group = 'com.github.mobile-gt'
+
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    def package_name = "com.gamatechno.chato.sdk"
+    def app_alias_name = "Chato"
+
+    flavorDimensions "default"
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 29
+        resValue "string", "app_name", app_alias_name
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+
+        def addUrl = { constantName, constantValue ->
+            buildConfigField "String", "${constantName}", "\"${constantValue}\""
+        }
+
+        addUrl("stringLogin", "login")
+        addUrl("stringSignin", "api/auth/signin")
+        addUrl("stringProfile", "apix/getProfile")
+        addUrl("stringCustomerInfo", "api/getCustomerInfo")
+        addUrl("stringRegister", "api/auth/register")
+        addUrl("stringProfileBy", "apix/getProfileByData?type=")
+        addUrl("stringKontak", "apix/chat/getListUser")
+        addUrl("stringMessageInfo", "apix/chat/messageInfo")
+//        addUrl("stringListConversation", "apix/v2/chat/getListRoom")
+        addUrl("stringListConversation", "apix/chat/getListRoom")
+        addUrl("stringRoomDetailv2", "apix/v2/chat/getRoomDetail")
+        addUrl("stringRoomEmail", "apix/v2/chat/getRoomDetailByEmail")
+        addUrl("stringRoomDetail", "apix/chat/getRoomDetail")
+        addUrl("stringListGroup", "apix/chat/getGroupList")
+        addUrl("stringSearchConversation", "apix/chat/searchChat")
+        addUrl("stringCreateGroup", "apix/chat/createGroup")
+        addUrl("stringSearchUser", "apix/chat/searchUser")
+        addUrl("stringAddMemberGroup", "apix/chat/addUserRoomGroup")
+        addUrl("stringHistoryChat", "apix/v2/chat/getHistoryChat")
+        addUrl("stringHistoryGroupChat", "apix/chat/getGroupChatHistory")
+        addUrl("stringSendMessage", "apix/chat/sendMessage")
+        addUrl("stringBroadcastMessage", "apix/chat/sendMessageBroadcast")
+        addUrl("stringSendGroupMessage", "apix/chat/sendGroupMessage")
+        addUrl("stringUpdateStatusMessage", "apix/chat/updateStatusMessage")
+        addUrl("stringlistRoomGroup", "apix/chat/getListRoomGroup")
+        addUrl("stringUpdateDeviceToken", "apix/updateDeviceToken")
+        addUrl("stringGetCustomerToken", "api/getToken")
+        addUrl("stringPinnedChatRoom", "apix/chat/pinedRoom")
+        addUrl("stringPinnedMultipleChatRoom", "apix/chat/pinnedMultipleRoom")
+        addUrl("stringStarMessage", "apix/chat/startMessage")
+        addUrl("stringSearchMessage", "apix/chat/searchMessage")
+        addUrl("stringInfoDetailGroup", "apix/chat/getRoomDetail")
+        addUrl("stringDeleteMessage", "apix/chat/deleteMessage")
+        addUrl("stringUpdateDetailGroup", "apix/chat/updateRoomGroup")
+        addUrl("stringForceDeleteMessage", "apix/chat/forceDeleteMessage")
+        addUrl("stringListGlobalStarredMessage", "apix/chat/getListGlobalStarredMessage")
+        addUrl("stringListStarredMessage", "apix/chat/getListStaredMessage")
+        addUrl("stringListRoomMedia", "apix/chat/getListRoomMedia")
+        addUrl("stringCreateRoom", "apix/chat/createRoom")
+        addUrl("stringCreateRoomGroup", "apix/chat/createRoomGroup")
+        addUrl("stringUpdatePhotoProfile", "apix/updatePhotoProfile")
+        addUrl("stringDeleteRoom", "apix/chat/deleteRoom")
+        addUrl("stringClearRoom", "apix/chat/clearRoom")
+        addUrl("stringRemoveFromGroup", "apix/chat/removeUserRoomGroup")
+        addUrl("stringUpdateAdminGroupRole", "apix/chat/addUserRoomGroupRole")
+        addUrl("stringExitRoomGroup", "apix/chat/exitRoomGroup")
+        addUrl("stringUploadFile", "apix/media/uploadFile")
+        addUrl("stringMessageGroupInfo", "apix/chat/getMessageInfo")
+        addUrl("stringUpdateRoomInfo", "apix/v2/chat/getUpdatedRoomInfo")
+        addUrl("stringPinMessage", "apix/chat/pinnedMessage")
+        addUrl("stringListAgenda", "apix/agenda/getListAgenda")
+        addUrl("stringAddAgenda", "apix/agenda/addAgenda")
+        addUrl("stringUpdateAgenda", "apix/agenda/updateAgenda")
+        addUrl("stringDeleteAgenda", "apix/agenda/deleteAgenda")
+        addUrl("stringDetailAgenda", "apix/agenda/getDetailListAgenda")
+        addUrl("stringListLabel", "apix/label/getListLabel")
+        addUrl("stringAddLabel", "apix/label/addLabel")
+        addUrl("stringUpdateLabel", "apix/label/updateLabel")
+        addUrl("stringDeleteLabel", "apix/label/deleteLabel")
+        addUrl("stringDetailLabel", "apix/label/getDetailListLabel")
+        addUrl("stringMyDocument", "apix/agenda/getMyDocument")
+        addUrl("stringUploadDocumentSharing", "apix/media/uploadDocument")
+        addUrl("stringListRoomLabel", "apix/label/getListRoomLabel")
+        addUrl("stringDeleteRoomLabel", "apix/label/addRoomLabel")
+        addUrl("stringAddRoomLabel", "apix/label/deleteRoomLabel")
+        addUrl("stringReactionChat", "apix/chat/messageReaction")
+    }
+
+    configurations {
+        cleanedAnnotations
+        compile.exclude group: 'org.jetbrains', module: 'annotations'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+        }
+    }
+    flavorDimensions 'version'
+    productFlavors {
+        dev {
+            def makeAConstant = { constantName, constantValue ->
+                manifestPlaceholders += [(constantName): constantValue]
+                buildConfigField "String", "${constantName}", "\"${constantValue}\""
+            }
+            //makeAConstant("app_name", "Chato SDK")
+            makeAConstant("application_name", "Chato")
+
+            makeAConstant("base_api", "https://api.chato.id:3017/")
+            makeAConstant("base_socket", "https://api.chato.id:3018/")
+            makeAConstant("cust_secret", "chato-46A423073543CDA4AF73091DD37F8B1D")
+            makeAConstant("cust_app_id", "AIZ-FEEEA8A22C8BFB300AD10BD810164E22")
+        }
+        live {
+            def makeAConstant = { constantName, constantValue ->
+                manifestPlaceholders += [(constantName): constantValue]
+                buildConfigField "String", "${constantName}", "\"${constantValue}\""
+            }
+            //makeAConstant("app_name", "Chato SDK")
+            makeAConstant("application_name", "Chato")
+
+            makeAConstant("base_api", "https://api.chato.id:3030/")
+            makeAConstant("base_socket", "https://api.chato.id:3031")
+            makeAConstant("cust_secret", "chato-46A423073543CDA4AF73091DD37F8B5R")
+            makeAConstant("cust_app_id", "AIZ-FEEEA8A22C8BFB300AD10BD81016444")
+
+            /*makeAConstant("base_api", "http://103.93.53.57:3000/")
+            makeAConstant("base_socket", "http://103.93.53.214:2000")
+            makeAConstant("cust_secret", "chato-46A423073543CDA4AF73091DD37F8B5R")
+            makeAConstant("cust_app_id", "AIZ-FEEEA8A22C8BFB300AD10BD81016444")
+            */
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+
+}
+
+def siteUrl = 'https://git.gamatechno.net/mobile/Android/chato-mvp'      // Homepage URL of the library
+def gitUrl = 'https://git.gamatechno.net/mobile/Android/chato-mvp.git'   // Git repository URL
+group = "com.gamatechno"
+
+/*install {
+    repositories.mavenInstaller {
+        // This generates POM.xml with proper parameters
+        pom {
+            project {
+                packaging 'aar'
+
+                // Add your description here
+                name 'com.gamatechno.chato.sdk:chatosdk' // TODO
+                description = 'Chato SDK' // TODO
+                url siteUrl
+
+                // Set your license
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id 'almuwahhid' // TODO
+                        name 'Al Muwahhid' // TODO
+                        email 'muh.almuwahhid@gmail.com' // TODO
+                    }
+                }
+                scm {
+                    connection gitUrl
+                    developerConnection gitUrl
+                    url siteUrl
+                }
+            }
+        }
+    }
+}*/
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadoc(type: Javadoc) {
+    excludes = ['**/*.kt']
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+/*bintray {
+    user = properties.getProperty("bintray.user")
+    key = properties.getProperty("bintray.apikey")
+
+    configurations = ['archives']
+    pkg {
+        repo = "chato-sdk"
+        // it is the name that appears in bintray when logged
+        name = "com.gamatechno.chato.sdk:chato-sdk" // TODO
+        websiteUrl = siteUrl
+        vcsUrl = gitUrl
+        licenses = ["Apache-2.0"]
+        publish = true
+        version {
+            gpg {
+                sign = true //Determines whether to GPG sign the files. The default is false
+                passphrase = properties.getProperty("bintray.gpg.password")
+                //Optional. The passphrase for GPG signing'
+            }
+        }
+    }
+}*/
+
+dependencies {
+//    imlementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+//    implementation 'io.pristine:libjingle:9127@aar'
+//    implementation files('libs/ggfw-release.aar', 'libs/ggfw-ui.aar')
+    implementation files('libs/jsoup-1.13.1.jar')
+//    implementation files('libs/chato-emojicon.aar')
+
+
+    implementation "junit:junit:4.12"
+    implementation 'androidx.test.espresso:espresso-core:3.1.0'
+    implementation 'androidx.test.espresso:espresso-intents:3.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.multidex:multidex:2.0.0'
+
+    implementation "io.reactivex.rxjava2:rxjava:2.1.9"
+    implementation "io.reactivex.rxjava2:rxandroid:2.0.1"
+
+    implementation 'androidx.room:room-runtime:2.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    annotationProcessor 'androidx.room:room-compiler:2.0.0'
+
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation "androidx.lifecycle:lifecycle-viewmodel:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-livedata:2.2.0"
+
+    implementation "com.jakewharton:butterknife:10.0.0"
+    annotationProcessor "com.jakewharton:butterknife-compiler:10.0.0"
+//    implementation 'com.github.sundeepk:compact-calendar-view:3.0.0'
+
+    implementation "com.theartofdev.edmodo:android-image-cropper:2.8.0"
+//    api "com.github.hani-momanii:SuperNova-Emoji:1.1"
+
+//    implementation 'commons-io:commons-io:2.6'
+//    implementation group: 'commons-codec', name: 'commons-codec', version: '1.9'
+
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'jp.wasabeef:picasso-transformations:2.2.1'
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+    api 'com.github.Commit451:ElasticDragDismissLayout:1.0.4'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+
+    api 'com.google.android.material:material:1.3.0-alpha01'
+    api 'androidx.cardview:cardview:1.0.0'
+//    implementation 'agency.tango.android:material-intro-screen:0.0.5'
+    implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
+    implementation 'com.airbnb.android:lottie:2.7.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.android.volley:volley:1.1.0'
+    implementation 'cat.ereza:customactivityoncrash:2.1.0'
+    implementation 'com.google.android:flexbox:2.0.1'
+    implementation('io.socket:socket.io-client:1.0.0') {
+        exclude group: 'org.json', module: 'json'
+    }
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation project(':chatosdk:chato-emoticon')
+    implementation project(':chatosdk:chato-widget')
+    api project(":chatosdk:ggfw")
+    implementation project(":chatosdk:ggfw-ui")
+    api('androidx.emoji:emoji:1.2.0-alpha03')
+    implementation 'com.github.squti:Android-Wave-Recorder:1.6.0'
+
+    //    implementation 'org.apache.commons:commons-collections4:4.4'
+//    implementation 'commons-codec:commons-codec:1.9@jar'
+}
+repositories {
+    mavenCentral()
+}

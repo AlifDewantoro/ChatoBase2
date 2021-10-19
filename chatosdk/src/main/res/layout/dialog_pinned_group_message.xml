@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lay_dialog"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/grey_200"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.gamatechno.chato.sdk.app.chatinfo.DialogChatInfo">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_toolbar"
+        app:cardElevation="@dimen/dimen_2dp"
+        app:cardCornerRadius="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_56dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/img_back"
+                style="@style/clickable"
+                android:padding="@dimen/dimen_16dp"
+                android:src="@drawable/ic_close_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <com.gamatechno.chato.sdk.utils.animation.AnimationToggle
+                android:id="@+id/toggle_kontak"
+                android:layout_toRightOf="@+id/img_back"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <EditText
+                    android:imeOptions="actionSearch"
+                    android:inputType="textAutoComplete"
+                    android:visibility="gone"
+                    android:id="@+id/edt_search"
+                    android:hint="Cari Kontak"
+                    android:background="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <RelativeLayout
+                    android:id="@+id/lay_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_centerVertical="true"
+                        android:text="Pinned Message"
+                        android:gravity="center_vertical"
+                        style="@style/Text.Title.Banner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </RelativeLayout>
+            </com.gamatechno.chato.sdk.utils.animation.AnimationToggle>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/cardview_toolbar"
+        android:padding="@dimen/dimen_16dp"
+        android:layout_margin="@dimen/dimen_2dp"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            app:cardBackgroundColor="@color/white"
+            app:contentPadding="@dimen/dimen_8dp"
+            app:cardCornerRadius="@dimen/dimen_8dp"
+            android:layout_margin="@dimen/dimen_2dp"
+            app:cardElevation="@dimen/dimen_2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    style="@style/clickable"
+                    android:id="@+id/img_option"
+                    android:src="@drawable/ic_more_vert_black_24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_pinnedmessage"
+                    android:text="Qwyuqwuei aoisjd qowijd asoidj aoisjdoaijsd aosijdioajsd asidjaiojsd asoidjoiasjd oaisjdoij asiojd "
+                    android:layout_toLeftOf="@+id/img_option"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</RelativeLayout>

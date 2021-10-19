@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lay"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorToolbarText"
+    android:paddingBottom="@dimen/dimen_24dp"
+    tools:context=".app.kontakchat.KontakChatDialog">
+        <RelativeLayout
+            android:id="@+id/cardview_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_56dp">
+            <ImageView
+                android:id="@+id/img_back"
+                style="@style/clickable"
+                android:padding="@dimen/dimen_16dp"
+                android:src="@drawable/ic_chat_back"
+                app:tint="@color/colorMonocrome100"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <com.gamatechno.chato.sdk.utils.animation.AnimationToggle
+                android:id="@+id/toggle_kontak"
+                android:layout_toRightOf="@+id/img_back"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <EditText
+                    android:imeOptions="actionSearch"
+                    android:inputType="textAutoComplete"
+                    android:visibility="gone"
+                    android:id="@+id/edt_search"
+                    android:hint="Cari Kontak"
+                    android:background="@null"
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/lay_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img_search"
+                        android:layout_width="@dimen/dimen_24dp"
+                        android:layout_height="@dimen/dimen_24dp"
+                        android:layout_marginRight="@dimen/dimen_16dp"
+                        android:src="@drawable/ic_chato_search"
+                        app:tint="@color/colorMonocrome100"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        style="@style/Text.Title.Banner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:text="Pilih Kontak"
+                        android:textColor="@color/colorMonocrome100"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.gamatechno.chato.sdk.utils.animation.AnimationToggle>
+        </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@+id/cardview_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/lay_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </androidx.recyclerview.widget.RecyclerView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        <include layout="@layout/layout_helper"/>
+    </RelativeLayout>
+</RelativeLayout>

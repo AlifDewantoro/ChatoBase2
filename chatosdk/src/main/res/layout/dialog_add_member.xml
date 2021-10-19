@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lay_dialog"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#F9F9FC"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:theme="@style/Theme.MaterialComponents.Light"
+    tools:context=".app.kontakchat.KontakChatDialog">
+        <RelativeLayout
+            android:id="@+id/cardview_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_56dp">
+            <ImageView
+                android:id="@+id/img_back"
+                style="@style/clickable"
+                android:padding="@dimen/dimen_16dp"
+                android:src="@drawable/ic_backward_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:tint="@color/black" />
+            <com.gamatechno.chato.sdk.utils.animation.AnimationToggle
+                android:id="@+id/toggle_kontak"
+                android:layout_toRightOf="@+id/img_back"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <EditText
+                    android:imeOptions="actionSearch"
+                    android:inputType="textAutoComplete"
+                    android:visibility="gone"
+                    android:id="@+id/edt_search"
+                    android:hint="Cari Kontak"
+                    android:background="@null"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <RelativeLayout
+                    android:id="@+id/lay_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/img_search"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="@dimen/dimen_16dp"
+                        android:src="@drawable/ic_chato_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:tint="@color/black" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tv_title"
+                            android:text="Kontak"
+                            style="@style/Text.Title.Banner"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/tv_subtitle"
+                            android:text="Pilih Kontak"
+                            style="@style/Text.Standard.OneRow"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </com.gamatechno.chato.sdk.utils.animation.AnimationToggle>
+        </RelativeLayout>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardview_search">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/lay_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/lay_result"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_below="@+id/lay_result"
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </androidx.recyclerview.widget.RecyclerView>
+            <include layout="@layout/layout_helper"
+                android:layout_below="@+id/lay_result"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" />
+        </RelativeLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <!--<RelativeLayout-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginBottom="@dimen/dimen_16dp"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|end">-->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/dimen_16dp"
+            app:shapeAppearanceOverlay="@style/FabAppearanceChato"
+            android:src="@drawable/ic_ok_bold"
+            app:fabSize="normal"
+            app:backgroundTint="@color/colorPrimaryDark"
+            app:tint="@color/white" />
+    <!--</RelativeLayout>-->
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>

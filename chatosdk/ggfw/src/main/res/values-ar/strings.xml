@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="txt_network_error">الشبكة في ورطة</string>
+    <string name="txt_data_error">لا يمكن عرض البيانات</string>
+    <string name="txt_server_error">الخادم غير متصل</string>
+    <string name="txt_server_time_out">تستجيب الشبكة لفترة طويلة جدًا</string>
+    <string name="txt_check_connection">تحقق من اتصال الإنترنت الخاص بك</string>
+    <string name="txt_NoConnection">لا شبكة الإنترنت</string>
+    <string name="form_empty">لا يمكن أن تكون الأعمدة فارغة</string>
+</resources>
